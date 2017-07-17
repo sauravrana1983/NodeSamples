@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var PORT = 3000; // Upper case variable name specifies a constant variable
+var PORT = process.env.PORT || 3000; // Upper case variable name specifies a constant variable
 var middleware = require('./middleware.js');
 
 
