@@ -2,9 +2,6 @@ var express = require('express');
 var app = express();
 var PORT = 3000; // Upper case variable name specifies a constant variable
 
-// app.get('/', function(req,res){
-//     res.send('Hello Express');
-// })
 
 var middleware = {
     requireAuthentication: function(req, res, next){
