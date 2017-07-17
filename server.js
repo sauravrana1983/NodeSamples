@@ -1,19 +1,8 @@
 var express = require('express');
 var app = express();
 var PORT = 3000; // Upper case variable name specifies a constant variable
+var middleware = require('./middleware.js');
 
-
-var middleware = {
-    requireAuthentication: function(req, res, next){
-        console.log('private route hit');
-        next();
-    },
-    logger: function(req, res, next){
-        var date = new Date().toString();
-        console.log(req.method + ' ' + date + ' ' + req.originalUrl);
-        next();
-    }
-};
 
 app.use(middleware.logger);
 
@@ -27,4 +16,3 @@ app.listen(PORT, function(){
     console.log('Started Express Server' + PORT);
 });
 
-//applicaiton level middleware and route level middleware
