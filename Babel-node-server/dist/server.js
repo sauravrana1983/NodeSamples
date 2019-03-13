@@ -13,7 +13,7 @@ _http.default.createServer(function (req, res) {
   res.writeHead(200, {
     'Content-Type': 'text/plain'
   });
-  res.end('Sample App');
+  res.end('Sample 123');
 }).listen(port, host);
 
 console.log(_chalk.default.green('Server running on port ' + host + ':' + port));
